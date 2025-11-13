@@ -1,4 +1,4 @@
-import myImage from '/src/public/mrudul.png'
+import myImage from '/landing/src/public/mrudul.png'
 
 export function Founder() {
   return (

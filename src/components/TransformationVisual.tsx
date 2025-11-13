@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 
-const logoImage = '/src/public/logo.png';
+const logoImage = '/landing/src/public/logo.png';
 
 type Stage = 'excel' | 'flow' | 'dashboard' | 'logo';
 

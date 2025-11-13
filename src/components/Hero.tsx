@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 import { Sparkles } from 'lucide-react';
 
-const logoImage = '/src/public/logo.png';
+const logoImage = '/landing/src/public/logo.png';
 
 const terminalCommands = [
   { text: '> Initializing SANE Terminal...', delay: 0 },
