@@ -116,44 +116,44 @@ export function TransformationVisual() {
   }, [stage]);
 
   return (
-    <div className="relative w-full bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-2xl overflow-hidden border-2 border-gray-200 shadow-2xl" style={{ height: '500px', maxWidth: '900px', margin: '0 auto' }}>
+    <div className="relative w-full bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-2xl border-2 border-gray-200 shadow-2xl" style={{ height: '500px', maxWidth: '900px', margin: '0 auto', overflow: 'hidden' }}>
       {/* Stage 1: Enhanced Realistic Excel Files with ERP Integration */}
       <div
         className={`absolute inset-0 transition-all duration-700 ${
           stage === 'excels' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-4 h-full flex flex-col items-center justify-center bg-gray-100">
-          <div className="text-center mb-4">
-            <div className="text-gray-900 font-mono text-sm mb-2">SCANNING DATA SOURCES</div>
-            <div className="text-gray-500 text-xs mb-3">Auto-ingesting financial records from multiple systems</div>
+        <div className="p-4 h-full flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
+          <div className="text-center mb-3">
+            <div className="text-gray-900 font-mono text-xs mb-1">SCANNING DATA SOURCES</div>
+            <div className="text-gray-500 text-[10px] mb-2">Auto-ingesting financial records from multiple systems</div>
             
             {/* ERP Integration Indicators */}
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-gray-300 shadow-sm">
-                <Database className="w-4 h-4 text-blue-600" />
-                <span className="text-xs text-gray-700">QuickBooks</span>
-                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="flex items-center gap-1 bg-white px-2 py-1 rounded-lg border border-gray-300 shadow-sm">
+                <Database className="w-3 h-3 text-blue-600" />
+                <span className="text-[10px] text-gray-700">QuickBooks</span>
+                <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
               </div>
-              <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-gray-300 shadow-sm">
-                <Cloud className="w-4 h-4 text-purple-600" />
-                <span className="text-xs text-gray-700">Xero</span>
-                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-1 bg-white px-2 py-1 rounded-lg border border-gray-300 shadow-sm">
+                <Cloud className="w-3 h-3 text-purple-600" />
+                <span className="text-[10px] text-gray-700">Xero</span>
+                <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
               </div>
-              <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-gray-300 shadow-sm">
-                <Zap className="w-4 h-4 text-orange-600" />
-                <span className="text-xs text-gray-700">NetSuite</span>
-                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-1 bg-white px-2 py-1 rounded-lg border border-gray-300 shadow-sm">
+                <Zap className="w-3 h-3 text-orange-600" />
+                <span className="text-[10px] text-gray-700">NetSuite</span>
+                <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
               </div>
-              <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-gray-300 shadow-sm">
-                <Database className="w-4 h-4 text-red-600" />
-                <span className="text-xs text-gray-700">SAP</span>
-                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-1 bg-white px-2 py-1 rounded-lg border border-gray-300 shadow-sm">
+                <Database className="w-3 h-3 text-red-600" />
+                <span className="text-[10px] text-gray-700">SAP</span>
+                <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-3 w-full max-w-6xl">
+          <div className="grid grid-cols-3 gap-2 w-full px-2" style={{ maxWidth: '800px' }}>
             {/* Enhanced Invoice Excel with Tabs */}
             <div className={`transition-all duration-500 ${highlightedExcels.includes(0) ? 'scale-105' : 'scale-100 opacity-60'}`}>
               <div className={`bg-white rounded-lg shadow-xl border-2 overflow-hidden ${highlightedExcels.includes(0) ? 'border-[#FF4500]' : 'border-gray-300'}`}>
@@ -406,171 +406,117 @@ export function TransformationVisual() {
         </div>
       </div>
 
-      {/* Stage 2: Process Flow Discovery with Connected Flows */}
+      {/* Stage 2: Clean Logistics-Style Workflow */}
       <div
         className={`absolute inset-0 transition-all duration-700 ${
           stage === 'processes' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-4 h-full flex bg-gradient-to-br from-slate-50 to-slate-100">
-          {/* Left Sidebar - Process Discovery */}
-          <div className="w-48 bg-white border-r-2 border-gray-300 p-3 flex flex-col">
-            <div className="mb-4">
-              <div className="text-gray-900 text-xs mb-2">PROCESS DISCOVERY</div>
-              <div className="bg-blue-600 text-white px-2 py-1 rounded text-[10px] mb-2">
-                77% Cases analyzed
-              </div>
-            </div>
+        <div className="p-6 h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+          <div className="text-center mb-6">
+            <div className="text-gray-900 font-mono text-sm mb-1">AI-DISCOVERED WORKFLOW</div>
+            <div className="text-gray-500 text-xs">Procure-to-Pay Process</div>
+          </div>
 
-            <div className="flex-1">
-              <div className="text-gray-600 text-[9px] mb-2 uppercase">Variants</div>
-              <div className="space-y-1.5">
-                {[
-                  { id: 1, cases: '2,318', pct: 68 },
-                  { id: 2, cases: '824', pct: 24 },
-                  { id: 3, cases: '412', pct: 12 },
-                  { id: 4, cases: '186', pct: 5 },
-                  { id: 5, cases: '94', pct: 3 },
-                ].map((variant, idx) => (
-                  <div key={variant.id} className="flex items-center gap-2">
-                    <CheckCircle className={`w-3 h-3 ${idx === 0 ? 'text-blue-600' : 'text-gray-400'}`} />
-                    <div className="flex-1">
-                      <div className="flex justify-between text-[8px]">
-                        <span className="text-gray-700">{variant.id}</span>
-                        <span className="text-gray-500">{variant.cases}</span>
-                      </div>
-                      <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-blue-600" style={{ width: `${variant.pct}%` }}></div>
-                      </div>
-                    </div>
+          {/* Simple Linear Workflow */}
+          <div className="relative w-full max-w-4xl">
+            <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
+              {/* Connection lines */}
+              {visibleProcessNodes.includes(1) && (
+                <line x1="12%" y1="50%" x2="26%" y2="50%" stroke="#3B82F6" strokeWidth="2" className="animate-draw" />
+              )}
+              {visibleProcessNodes.includes(2) && (
+                <line x1="38%" y1="50%" x2="52%" y2="50%" stroke="#3B82F6" strokeWidth="2" className="animate-draw" />
+              )}
+              {visibleProcessNodes.includes(3) && (
+                <line x1="64%" y1="50%" x2="78%" y2="50%" stroke="#3B82F6" strokeWidth="2" className="animate-draw" />
+              )}
+              {visibleProcessNodes.includes(4) && (
+                <line x1="90%" y1="50%" x2="98%" y2="50%" stroke="#10b981" strokeWidth="2" className="animate-draw" />
+              )}
+            </svg>
+
+            {/* Process Nodes in a single row */}
+            <div className="relative flex items-center justify-between px-4" style={{ minHeight: '120px' }}>
+              {/* Start Node */}
+              <div className={`transition-all duration-500 ${visibleProcessNodes.includes(0) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-[#FF4500] rounded-full flex items-center justify-center shadow-lg border-2 border-orange-600 mb-2">
+                    <ChevronRight className="w-6 h-6 text-white" />
                   </div>
-                ))}
+                  <div className="text-[10px] text-gray-600 text-center">Start</div>
+                </div>
               </div>
-            </div>
 
-            <div className="mt-4 pt-3 border-t border-gray-200">
-              <div className="text-gray-600 text-[9px]">Cases: 3,834 (34.3%)</div>
-              <div className="text-gray-600 text-[9px]">Total: 11,178</div>
+              {/* Step 1 - Create Requisition */}
+              <div className={`transition-all duration-500 ${visibleProcessNodes.includes(1) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="flex flex-col items-center">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                    <div className="text-[10px] text-center font-medium">Create Requisition</div>
+                    <div className="text-[8px] text-center text-blue-100 mt-1">Step 1</div>
+                  </div>
+                  <div className="text-[9px] text-gray-500">11,178 cases</div>
+                </div>
+              </div>
+
+              {/* Step 2 - Approve & Order */}
+              <div className={`transition-all duration-500 ${visibleProcessNodes.includes(2) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="flex flex-col items-center">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                    <div className="text-[10px] text-center font-medium">Approve & Order</div>
+                    <div className="text-[8px] text-center text-blue-100 mt-1">Step 2</div>
+                  </div>
+                  <div className="text-[9px] text-gray-500">9,240 cases</div>
+                </div>
+              </div>
+
+              {/* Step 3 - Receive Goods */}
+              <div className={`transition-all duration-500 ${visibleProcessNodes.includes(3) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="flex flex-col items-center">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                    <div className="text-[10px] text-center font-medium">Receive Goods</div>
+                    <div className="text-[8px] text-center text-blue-100 mt-1">Step 3</div>
+                  </div>
+                  <div className="text-[9px] text-gray-500">8,156 cases</div>
+                </div>
+              </div>
+
+              {/* Step 4 - Process Payment */}
+              <div className={`transition-all duration-500 ${visibleProcessNodes.includes(4) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="flex flex-col items-center">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                    <div className="text-[10px] text-center font-medium">Process Payment</div>
+                    <div className="text-[8px] text-center text-blue-100 mt-1">Step 4</div>
+                  </div>
+                  <div className="text-[9px] text-gray-500">3,834 cases</div>
+                </div>
+              </div>
+
+              {/* Complete Node */}
+              <div className={`transition-all duration-500 ${visibleProcessNodes.includes(5) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-lg border-2 border-green-700 mb-2">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-[10px] text-gray-600 text-center">Complete</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Main Process Flow Area */}
-          <div className="flex-1 p-4 overflow-hidden">
-            <div className="text-center mb-3">
-              <div className="text-gray-900 font-mono text-sm mb-1">AI-GENERATED PROCESS FLOWS</div>
-              <div className="text-gray-500 text-xs">Procure to Pay • All Cases</div>
+          {/* Bottom Stats */}
+          <div className={`mt-8 flex gap-8 ${visibleProcessNodes.includes(6) ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+            <div className="text-center">
+              <div className="text-2xl font-mono text-[#FF4500]">4</div>
+              <div className="text-[10px] text-gray-500">Process Steps</div>
             </div>
-
-            {/* Process Flow */}
-            <div className="relative h-full flex items-center justify-center">
-              <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-                {/* Connection lines - Main Flow (Bottom Row) */}
-                {visibleProcessNodes.includes(1) && (
-                  <line x1="8%" y1="50%" x2="21%" y2="50%" stroke="#3B82F6" strokeWidth="3" className="animate-draw" />
-                )}
-                {visibleProcessNodes.includes(2) && (
-                  <line x1="33%" y1="50%" x2="46%" y2="50%" stroke="#3B82F6" strokeWidth="3" className="animate-draw" />
-                )}
-                {visibleProcessNodes.includes(3) && (
-                  <line x1="58%" y1="50%" x2="71%" y2="50%" stroke="#3B82F6" strokeWidth="3" className="animate-draw" />
-                )}
-                
-                {/* Connection from bottom to top row */}
-                {visibleProcessNodes.includes(4) && (
-                  <line x1="83%" y1="50%" x2="83%" y2="35%" stroke="#3B82F6" strokeWidth="3" className="animate-draw" />
-                )}
-                
-                {/* Top row connections (going back) */}
-                {visibleProcessNodes.includes(5) && (
-                  <line x1="83%" y1="20%" x2="58%" y2="20%" stroke="#3B82F6" strokeWidth="3" className="animate-draw" />
-                )}
-                {visibleProcessNodes.includes(6) && (
-                  <line x1="46%" y1="20%" x2="21%" y2="20%" stroke="#3B82F6" strokeWidth="3" className="animate-draw" />
-                )}
-              </svg>
-
-              {/* Process Nodes */}
-              <div className="relative w-full h-full">
-                {/* Top Row (Return Flow) */}
-                <div className="absolute top-[12%] left-0 right-0">
-                  <div className="flex justify-around items-center relative">
-                    {/* Node 6 - Record Goods Receipt */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(6) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '8%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-blue-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Record Goods Receipt</div>
-                        <div className="text-[7px] text-center text-blue-100 mt-1">3,834 cases</div>
-                      </div>
-                    </div>
-
-                    {/* Node 5 - Receive Invoice */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(5) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '33.5%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-blue-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Receive Invoice</div>
-                        <div className="text-[7px] text-center text-blue-100 mt-1">3,728 cases</div>
-                      </div>
-                    </div>
-
-                    {/* Node 4 - Approve Payment */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(4) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '58.5%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-blue-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Approve Payment</div>
-                        <div className="text-[7px] text-center text-blue-100 mt-1">3,512 cases</div>
-                      </div>
-                    </div>
-
-                    {/* Node 7 - Post to Ledger (End) */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(6) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '83.5%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-green-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-green-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Post to GL</div>
-                        <div className="text-[7px] text-center text-green-100 mt-1">✓ Complete</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Row (Main Flow) */}
-                <div className="absolute bottom-[12%] left-0 right-0">
-                  <div className="flex justify-around items-center relative">
-                    {/* Node 0 - Start */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(0) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '0%', transform: 'translateX(-50%)' }}>
-                      <div className="w-10 h-10 bg-[#FF4500] rounded-full flex items-center justify-center shadow-lg border-2 border-orange-600">
-                        <ChevronRight className="w-5 h-5 text-white" />
-                      </div>
-                    </div>
-
-                    {/* Node 1 - Create Purchase Requisition */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(1) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '8%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-blue-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Create Purchase Requisition</div>
-                        <div className="text-[7px] text-center text-blue-100 mt-1">11,178 cases</div>
-                      </div>
-                    </div>
-
-                    {/* Node 2 - Obtain Purchase Order */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(2) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '33.5%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-blue-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Obtain Purchase Order</div>
-                        <div className="text-[7px] text-center text-blue-100 mt-1">9,240 cases</div>
-                      </div>
-                    </div>
-
-                    {/* Node 3 - Send Purchase Order */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(3) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '58.5%', transform: 'translateX(-50%)' }}>
-                      <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg border-2 border-blue-700 min-w-[100px]">
-                        <div className="text-[9px] text-center">Send Purchase Order</div>
-                        <div className="text-[7px] text-center text-blue-100 mt-1">8,156 cases</div>
-                      </div>
-                    </div>
-
-                    {/* End node marker (connecting to top) */}
-                    <div className={`transition-all duration-500 ${visibleProcessNodes.includes(4) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ position: 'absolute', left: '83.5%', transform: 'translateX(-50%)' }}>
-                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-700">
-                        <ArrowRight className="w-4 h-4 text-white rotate-[-90deg]" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="text-center">
+              <div className="text-2xl font-mono text-[#FF4500]">11.2K</div>
+              <div className="text-[10px] text-gray-500">Total Cases</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-mono text-[#FF4500]">94%</div>
+              <div className="text-[10px] text-gray-500">Completion Rate</div>
             </div>
           </div>
         </div>
@@ -582,7 +528,7 @@ export function TransformationVisual() {
           stage === 'orgmap' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-4 h-full bg-black">
+        <div className="p-4 h-full bg-black overflow-hidden">
           {/* Bloomberg header */}
           <div className="bg-[#FF4500] px-3 py-1 flex items-center justify-between mb-3">
             <div className="flex items-center gap-4">
@@ -761,7 +707,7 @@ export function TransformationVisual() {
           stage === 'bloomberg' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-2 h-full bg-black">
+        <div className="p-2 h-full bg-black overflow-hidden">
           {/* Bloomberg-style header */}
           <div className="bg-[#FF4500] px-3 py-1 flex items-center justify-between mb-2">
             <div className="flex items-center gap-4">
@@ -978,13 +924,13 @@ export function TransformationVisual() {
           stage === 'deliverables' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-4 h-full bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center">
+        <div className="p-4 h-full bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center overflow-hidden">
           <div className="text-center mb-4">
             <div className="text-gray-900 font-mono text-sm mb-2">INVESTOR-READY DELIVERABLES</div>
             <div className="text-gray-500 text-xs">Cap tables, cash flow statements, audit reports & compliance</div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 max-w-6xl w-full">
+          <div className="grid grid-cols-2 gap-3 w-full px-4" style={{ maxWidth: '700px' }}>
             {/* Cap Table */}
             <div
               className={`transition-all duration-500 ${
