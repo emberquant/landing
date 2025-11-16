@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FileSpreadsheet, Network, TrendingUp, FileText, Users, Building, DollarSign, ShoppingCart, Briefcase, UserCheck, ArrowRight, CheckCircle, ChevronRight, Database, Cloud, Zap } from 'lucide-react';
 
-const logoImage = "src/assets/logo.png";
+const logoImage = "/logo.png";
 type Stage = 'excels' | 'processes' | 'orgmap' | 'bloomberg' | 'deliverables' | 'cta';
 
 export function TransformationVisual() {

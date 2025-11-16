@@ -9,7 +9,7 @@ export function Founder() {
             {/* Photo */}
             <div className="md:col-span-2">
               <ImageWithFallback
-                src="src/assets/mrudul.png"
+                src="/mrudul.png"
                 alt="Mrudul Mamtani, Founder of EmberQuant"
                 className="w-full h-full object-cover grayscale"
               />

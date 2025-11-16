@@ -2,7 +2,7 @@ import { Button } from './ui/button';
 
 import { Sparkles } from 'lucide-react';
 import { TransformationVisual } from './TransformationVisual';
-const logoImage = "src/assets/logo.png";
+const logoImage = "/logo.png";
 const floatingMetrics = [
   { label: 'ARR', value: '$2.4M', x: '5%', y: '15%' },
   { label: 'MRR', value: '$200K', x: '8%', y: '75%' },
