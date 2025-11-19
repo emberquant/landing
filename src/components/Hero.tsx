@@ -46,9 +46,9 @@ export function Hero() {
         </div>
       ))}
 
-      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-24 relative z-10">
         {/* Split Layout: Left Content + Right Visual */}
-        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 items-start min-h-[85vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-6 sm:gap-8 items-start min-h-auto lg:min-h-[85vh]">
           {/* Left: Text Content */}
           <div className="space-y-10">
             {/* Logo - Much Larger */}
@@ -75,20 +75,20 @@ export function Hero() {
             
             <div className="space-y-6">
               <h1 className="font-serif tracking-tight text-white leading-none">
-                <span className="block text-6xl lg:text-7xl mb-3">Financial</span>
-                <span className="block text-6xl lg:text-7xl mb-3">Control,</span>
-                <span className="block text-6xl lg:text-7xl bg-gradient-to-r from-[#FF4500] to-orange-600 bg-clip-text text-transparent">Simplified.</span>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-2 sm:mb-3">Financial</span>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-2 sm:mb-3">Control,</span>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-[#FF4500] to-orange-600 bg-clip-text text-transparent">Simplified.</span>
               </h1>
               
               <div className="h-1.5 w-32 bg-gradient-to-r from-[#FF4500] to-orange-600 rounded-full"></div>
             </div>
             
-            <p className="text-gray-300 max-w-xl text-xl leading-relaxed">
+            <p className="text-gray-300 max-w-xl text-base sm:text-lg lg:text-xl leading-relaxed">
               Stop drowning in spreadsheets. EmberQuant's AI automates your entire accounting workflow—from data entry to VC-ready reports. Talk to <span className="text-[#FF4500] font-mono font-semibold">Jared</span>, your 24/7 AI accountant.
             </p>
 
             {/* Animated Stats */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
               <div className="text-center p-5 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-[#FF4500]/50 transition-all hover:scale-105">
                 <div className="text-[#FF4500] font-mono text-2xl">60%</div>
                 <div className="text-gray-400 text-sm mt-1">Time Saved</div>

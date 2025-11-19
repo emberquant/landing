@@ -58,13 +58,13 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl p-8 border-2 transition-all hover:shadow-xl relative ${
+              className={`bg-white rounded-xl p-6 sm:p-8 border-2 transition-all hover:shadow-xl relative ${
                 plan.recommended
-                  ? 'border-black shadow-lg scale-105'
+                  ? 'border-black shadow-lg md:scale-105'
                   : 'border-gray-200'
               }`}
             >

@@ -116,14 +116,14 @@ export function TransformationVisual() {
   }, [stage]);
 
   return (
-    <div className="relative w-full bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-2xl border-2 border-gray-200 shadow-2xl" style={{ height: '500px', maxWidth: '900px', margin: '0 auto', overflow: 'hidden' }}>
+    <div className="relative w-full bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-2xl border-2 border-gray-200 shadow-2xl max-w-[900px] mx-auto overflow-hidden min-h-[350px] sm:min-h-[420px] md:min-h-[500px] lg:h-[500px]">
       {/* Stage 1: Enhanced Realistic Excel Files with ERP Integration */}
       <div
         className={`absolute inset-0 transition-all duration-700 ${
           stage === 'excels' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-4 h-full flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
+        <div className="p-2 sm:p-4 h-full flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
           <div className="text-center mb-3">
             <div className="text-gray-900 font-mono text-xs mb-1">SCANNING DATA SOURCES</div>
             <div className="text-gray-500 text-[10px] mb-2">Auto-ingesting financial records from multiple systems</div>
@@ -153,7 +153,7 @@ export function TransformationVisual() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-2 w-full px-2" style={{ maxWidth: '800px' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-2 w-full px-1 sm:px-2 max-w-[800px]">
             {/* Enhanced Invoice Excel with Tabs */}
             <div className={`transition-all duration-500 ${highlightedExcels.includes(0) ? 'scale-105' : 'scale-100 opacity-60'}`}>
               <div className={`bg-white rounded-lg shadow-xl border-2 overflow-hidden ${highlightedExcels.includes(0) ? 'border-[#FF4500]' : 'border-gray-300'}`}>
@@ -412,7 +412,7 @@ export function TransformationVisual() {
           stage === 'processes' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-6 h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+        <div className="p-3 sm:p-6 h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
           <div className="text-center mb-6">
             <div className="text-gray-900 font-mono text-sm mb-1">AI-DISCOVERED WORKFLOW</div>
             <div className="text-gray-500 text-xs">Procure-to-Pay Process</div>
@@ -420,7 +420,7 @@ export function TransformationVisual() {
 
           {/* Simple Linear Workflow */}
           <div className="relative w-full max-w-4xl">
-            <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
+            <svg className="absolute inset-0 w-full h-full hidden sm:block" style={{ zIndex: 0 }}>
               {/* Connection lines */}
               {visibleProcessNodes.includes(1) && (
                 <line x1="12%" y1="50%" x2="26%" y2="50%" stroke="#3B82F6" strokeWidth="2" className="animate-draw" />
@@ -437,10 +437,10 @@ export function TransformationVisual() {
             </svg>
 
             {/* Process Nodes in a single row */}
-            <div className="relative flex items-center justify-between px-4" style={{ minHeight: '120px' }}>
+            <div className="relative flex flex-col sm:flex-row items-center justify-between px-4" style={{ minHeight: '120px' }}>
               {/* Start Node */}
               <div className={`transition-all duration-500 ${visibleProcessNodes.includes(0) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full sm:w-auto">
                   <div className="w-12 h-12 bg-[#FF4500] rounded-full flex items-center justify-center shadow-lg border-2 border-orange-600 mb-2">
                     <ChevronRight className="w-6 h-6 text-white" />
                   </div>
@@ -450,8 +450,8 @@ export function TransformationVisual() {
 
               {/* Step 1 - Create Requisition */}
               <div className={`transition-all duration-500 ${visibleProcessNodes.includes(1) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                <div className="flex flex-col items-center">
-                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                <div className="flex flex-col items-center w-full sm:w-auto">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-full sm:w-32 mb-2">
                     <div className="text-[10px] text-center font-medium">Create Requisition</div>
                     <div className="text-[8px] text-center text-blue-100 mt-1">Step 1</div>
                   </div>
@@ -461,8 +461,8 @@ export function TransformationVisual() {
 
               {/* Step 2 - Approve & Order */}
               <div className={`transition-all duration-500 ${visibleProcessNodes.includes(2) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                <div className="flex flex-col items-center">
-                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                <div className="flex flex-col items-center w-full sm:w-auto">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-full sm:w-32 mb-2">
                     <div className="text-[10px] text-center font-medium">Approve & Order</div>
                     <div className="text-[8px] text-center text-blue-100 mt-1">Step 2</div>
                   </div>
@@ -472,8 +472,8 @@ export function TransformationVisual() {
 
               {/* Step 3 - Receive Goods */}
               <div className={`transition-all duration-500 ${visibleProcessNodes.includes(3) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                <div className="flex flex-col items-center">
-                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                <div className="flex flex-col items-center w-full sm:w-auto">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-full sm:w-32 mb-2">
                     <div className="text-[10px] text-center font-medium">Receive Goods</div>
                     <div className="text-[8px] text-center text-blue-100 mt-1">Step 3</div>
                   </div>
@@ -483,8 +483,8 @@ export function TransformationVisual() {
 
               {/* Step 4 - Process Payment */}
               <div className={`transition-all duration-500 ${visibleProcessNodes.includes(4) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                <div className="flex flex-col items-center">
-                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-32 mb-2">
+                <div className="flex flex-col items-center w-full sm:w-auto">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg shadow-lg border-2 border-blue-700 w-full sm:w-32 mb-2">
                     <div className="text-[10px] text-center font-medium">Process Payment</div>
                     <div className="text-[8px] text-center text-blue-100 mt-1">Step 4</div>
                   </div>
@@ -494,7 +494,7 @@ export function TransformationVisual() {
 
               {/* Complete Node */}
               <div className={`transition-all duration-500 ${visibleProcessNodes.includes(5) ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full sm:w-auto">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-lg border-2 border-green-700 mb-2">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
@@ -707,7 +707,7 @@ export function TransformationVisual() {
           stage === 'bloomberg' ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
-        <div className="p-2 h-full bg-black overflow-hidden">
+        <div className="p-1 sm:p-2 h-full bg-black overflow-x-auto overflow-y-hidden">
           {/* Bloomberg-style header */}
           <div className="bg-[#FF4500] px-3 py-1 flex items-center justify-between mb-2">
             <div className="flex items-center gap-4">
@@ -720,7 +720,7 @@ export function TransformationVisual() {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-2 mb-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2 mb-2">
             {/* Top Metrics */}
             {[
               { label: 'REVENUE', value: '$847.2K', change: '+23.4%', positive: true },
@@ -738,11 +738,11 @@ export function TransformationVisual() {
             ))}
           </div>
 
-          <div className="grid grid-cols-6 gap-2 h-[calc(100%-90px)]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-1 sm:gap-2 h-[calc(100%-60px)] sm:h-[calc(100%-90px)]">
             {/* Revenue Trend - 2 cols */}
-            <div className="col-span-2 bg-gray-900 border border-gray-800 p-2">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-2 bg-gray-900 border border-gray-800 p-1 sm:p-2">
               <div className="text-[#FF4500] text-[9px] font-mono mb-2">REVENUE TREND (12M)</div>
-              <div className="flex items-end gap-0.5 h-20">
+              <div className="flex items-end gap-0.5 h-16 sm:h-20">
                 {[42, 48, 45, 58, 55, 62, 68, 65, 72, 78, 75, 85].map((height, idx) => (
                   <div key={idx} className="flex-1 bg-[#FF4500] rounded-t animate-growUp" style={{ height: `${height}%`, animationDelay: `${idx * 0.05}s` }}></div>
                 ))}
@@ -754,7 +754,7 @@ export function TransformationVisual() {
             </div>
 
             {/* Expense Categories Pie - 1 col */}
-            <div className="bg-gray-900 border border-gray-800 p-2">
+            <div className="col-span-1 bg-gray-900 border border-gray-800 p-1 sm:p-2">
               <div className="text-[#FF4500] text-[9px] font-mono mb-2">EXPENSE MIX</div>
               <div className="relative h-20 flex items-center justify-center">
                 <svg viewBox="0 0 100 100" className="w-20 h-20">
@@ -1145,7 +1145,7 @@ export function TransformationVisual() {
 
             {/* Brand Name */}
             <div className="animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-              <div className="text-white font-serif tracking-tight" style={{ fontSize: '4rem', lineHeight: '1' }}>
+              <div className="text-white font-serif tracking-tight text-4xl md:text-[4rem] leading-none">
                 EmberQuant
               </div>
               <div className="text-white/80 font-mono text-lg tracking-wider mt-2">QUANTIFY EXCELLENCE</div>
