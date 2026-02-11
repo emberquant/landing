@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Tiempos';
+  /* Name your font whatever you like */
+  src: url('fonts/Tiempos.eot') format('embedded-opentype'),
+    url('fonts/Tiempos.woff') format('woff'),
+    url('fonts/Tiempos.woff2') format('woff2'),
+    url('fonts/Tiempos.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* Improves performance */
+}
+
+/* Bodoni MT Condensed - Windows system font for brand name */
+.font-bodoni {
+  font-family: 'Bodoni MT Condensed', 'Bodoni MT', 'Didot', 'Times New Roman', serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 53% 14%;
+
+    --card: 220 20% 97%;
+    --card-foreground: 222 53% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 53% 14%;
+
+    --primary: 200 100% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 40% 71%;
+    --secondary-foreground: 222 53% 14%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 200 100% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 200 100% 48%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 20% 97%;
+    --sidebar-foreground: 222 53% 14%;
+    --sidebar-primary: 200 100% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 53% 14%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 200 100% 48%;
+
+    /* Custom tokens */
+    --ember-navy: 222 53% 14%;
+    --ember-blue: 200 100% 48%;
+    --ember-steel: 220 40% 71%;
+    --ember-dark: 222 53% 14%;
+    --ember-light: 220 20% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Tiempos', 'Georgia', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Tiempos', 'Georgia', serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--ember-blue))] to-[hsl(var(--ember-navy))];
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px -10px hsl(var(--ember-blue) / 0.15);
+  }
+
+  .bg-ember-dark {
+    background-color: hsl(var(--ember-dark));
+  }
+
+  .bg-ember-light {
+    background-color: hsl(var(--ember-light));
+  }
+
+  .border-ember {
+    border-color: hsl(var(--ember-blue) / 0.2);
+  }
+}
+
+/* Ticker animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 30s linear infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
