@@ -153,3 +153,44 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* ── Hero Terminal Background Animations ─────────────────── */
+
+/* Infinite scrolling risk feed */
+@keyframes terminal-scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-terminal-scroll {
+  animation: terminal-scroll 40s linear infinite;
+}
+
+/* Subtle horizontal scanlines */
+.hero-scanline {
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 168, 243, 0.015) 2px,
+      rgba(0, 168, 243, 0.015) 4px);
+}
+
+/* Gradient text shimmer */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -95,12 +95,12 @@ const CommandBar = ({ onCommand }: { onCommand: (cmd: string) => void }) => {
                     phase = "typing";
                     charIdx = 0;
                     seqIdx++;
-                    timer = setTimeout(tick, 600);
+                    timer = setTimeout(tick, 500);
                 }, current.delay);
             }
         };
 
-        timer = setTimeout(tick, 800);
+        timer = setTimeout(tick, 500);
         return () => clearTimeout(timer);
     }, []);
 
